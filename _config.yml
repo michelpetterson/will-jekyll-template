@@ -1,18 +1,20 @@
 # Site settings
-title: A blog about lorem ipsum dolor sit amet
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "/will-jekyll-template" # the subpath of your site, e.g. /blog
-url: "https://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: Site do treinamento de docker ministrado na UFBA
+description: Site contendo o material do treinamento de docker
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://docker.intranet.ufba.br"
 
 # User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+username: Treinamento Docker
+user_description: Analista Linux SR
+user_title: Michel Peterson
+email: michel.peterson@l1nuxc0d3.com
+facebook_username: petterson.michel
+github_username: michelpetterson
+linkedin_username: michelpetterson 
+docker_username: michelpetterson
 disqus_username: lorem_ipsum
+
 
 # Build settings
 markdown: kramdown
@@ -30,14 +32,15 @@ compress_html:
 # Links to include in menu navigation
 # For external links add external: true
 links:
-  - title: Home
+  - title: Início
     url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
-  - title: About Me
-    url: /about
+  - title: Aulas
+    url: /aulas/
+  - title: Exercícios
+    url: /exercises
+  - title: Labs
+    url: /labs/
+
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']

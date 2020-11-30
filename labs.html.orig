@@ -1,13 +1,13 @@
 ---
 layout: minimal
-title: "About me"
-permalink: /about/index.html
+title: "#Labs"
+permalink: /labs/index.html
 description: "Some description about Lorem Ipsum..."
 ---
 
 <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="Willian Justen">
 
-<h2>About Me</h2>
+<h2>Labs</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -14,20 +14,19 @@ layout: default
                   Ao final do treinamento o participante estará apto para criar imagens, customizar, executar novos serviços em um ambiente de contêiners assim como migrar uma aplicação de um ambiente virtualizado para microserviços.<br> Ainda nesse treinamento será possível entender os conceitos de cluster usando o Swarm. Com ele o participante entenderá como escalar, remover e gerenciar contêineres obtendo melhor resiliência e performance quando demandado pela sua aplicação.
                   </p>
                </div>
-	    </article>
-    {% assign total = 0 %}
-
+	   </article>
     {% for post in site.posts %}
-    {% assign total = total | plus: 1 %} 
         <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                 <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
                     <meta itemprop="datePublished" content="{{post.date}}">
                     <time datetime="{{ post.date | date_to_xmlschema }}">
-                        <span style="font-size:50px" class="day">
-			    0{{ total }}<br>
+                        <span class="day">
+				<-- {{ post.date | date: "%d" }} -->
+				01
                         </span>
-                        <span style="font-size:24px" class="month-year">
-			    Aula
+                        <span class="month-year">
+				<-- {{ post.date | date: "%B %Y" }} -->
+				Aula
                         </span>
                     </time>
                 </a>
@@ -35,11 +34,13 @@ layout: default
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <p class="description">
                         {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Leia mais</a>
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>
                     </p>
 
                     <div class="tags">
-                            <a href="https://docs.docker.io">Docker Documentation</a>
+                        {% for tag in post.tags %}
+                            <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                 </div>
         </article>

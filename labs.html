@@ -1,0 +1,16 @@
+---
+layout: minimal
+title: "#Labs"
+permalink: /labs/index.html
+description: ""
+---
+
+{% for post in site.posts  %}
+    <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] }}</span>
+    <ul class="post-list">
+        {% assign post_list = post.title %}
+            <li><a style="color: #000000; font-weight: bold" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+	    {% assign p_title = post.title | truncate: 4, "" %}
+	    <li><a href="{{ post.lab }}" target="_blank">>Iniciar o lab</a></li>
+    </ul>
+{% endfor %}
